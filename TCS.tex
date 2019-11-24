@@ -51,12 +51,12 @@ Although there were many cited documents and papers, it is notable to say here, 
 A brief description of each method listed above is given here, so the reader can see what interests him/her the most and skip right away to the hot stuff.
 
 \subsubsection{X-Ray Fluorescence (XRF)} \label{XRF}
-This technique covers the readout of X-Ray emission coming from elements, atomic or not, that are bombarded with high energy radiation (X-Rays, generally higher then the emitted photon), and by interacting with it in a specific way, produce a very characteristic radiation energy, that can be used to analyze a lot of materials (metals, ceramics, ...) qualitatively and quantitatively. 
+This technique covers the readout of X-Ray emission coming from elements, atomic or not, that are bombarded with high energy radiation (X-Rays, generally higher then the emitted photon), and by interacting with it in a specific way, produce a very characteristic radiation energy from the transition of an higher orbital into the innermost orbital, where the electron is removed by the radiation, that can be used to analyze a lot of materials (metals, ceramics, ...) qualitatively and quantitatively. 
 \par It can also even be used to some more exotic tasks, such as film thickness measurement. Because X-Rays are not attenuated very easily in the air, vacuum is not strictly necessary to perform measurements with this technique.\\
 
 Some of its pros and cons \cite{GI_XRF}:
 \begin{itemize}
-\item[\checkmark] Cheap Equipment
+\item[\checkmark] High Yield for large values of Z (atomic number)
 \item[\checkmark] Possibility of creating mobile devices for \textit{in situ} measurements
 \item[\checkmark] Large range of studiable materials
 \item[$\times$] Poor spot resolution (there are workarounds)
@@ -79,6 +79,23 @@ Some of its pros and cons \cite{CL_XPS}:
 \end{itemize}
 
 \subsubsection{Auger Electron Spectroscopy (AES)} \label{AES} %TODO
+This technique is actually pretty interesting, as it uses a phenomenon that might happen when core electrons are bombarded with high energy X-Rays. When the K layer electron leaves the atom, as a photo-electron, this atom becomes highly unstable, and a transition from the valence orbitals must occur. Detecting the radiation that comes from this transition is the core concept behind XRF (section \ref{XRF}). 
+\par However, there is a chance this new produced photon interacts with an existing valence electron, causing it to leave the atom as a photo-electron, since it as a lower binding energy (this electron is named after the who discovered "officially" the effect - \textit{Auger} electron, it appears that Lise Meitner found this effect first in 1922 \cite{AU_Wiki}). It is obvious, then, that in this process, we detect this electron to gather information about the atom under study. It is to note that AES can also be performed by exciting the K layer electron by electronic impact and not X-Ray excitation.\\
+
+\newpage
+
+Some of its pros and cons \cite{TH_Many}:
+\begin{itemize}
+\item[\checkmark] High Yield for low values of Z (atomic number)
+\item[\checkmark] Can use an electron source to excite atoms (cheaper)
+\item[\checkmark] Large range of studiable materials
+\item[$\times$] Usually not so good of a Signal to noise ratio (SNR)
+\item[$\times$] Pretty bad at quantitative analysis
+\item[$\times$] Used only to approximate compositional analysis
+\end{itemize}
+
+\subsubsection{Raman Spectroscopy}
+Named after it's inventor this type of spectroscopic technique is very different from the ones stated earlier.
 
 \newpage
 
@@ -95,6 +112,14 @@ X-ray fluorescence spectroscopy,
 \bibitem{CL_XPS}
 Photo-electron Spectroscopy,
 \\\texttt{https://chem.libretexts.org/Bookshelves/Physical\_and\_Theoretical\_Chemistry\_Textbook\_Maps/Supplemental\_Modules\_(Physical\_and\_Theoretical\_Chemistry)/Spectroscopy/Photoelectron\_Spectroscopy/Photoelectron\_Spectroscopy\%3A\_Application}
+
+\bibitem{AU_Wiki}
+Auger Effect,
+\\\texttt{https://en.wikipedia.org/wiki/Auger\_effect}
+
+\bibitem{TH_Many}
+Electron spectroscopies,
+\\\texttt{https://th.fhi-berlin.mpg.de/th/lectures/summer\_term\_2006/7\_spectroscopies.pdf}
 
 \end{thebibliography}
 
