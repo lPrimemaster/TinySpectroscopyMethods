@@ -2,7 +2,9 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{amsfonts}
-
+\usepackage[T1]{fontenc}
+\newcommand{\startunderscoreletter}{\catcode`_ 12\relax}
+\newcommand{\stopunderscoreletter}{\catcode`_ 8\relax}
 
 \begin{document}
 \title{A Tiny Compilation of Spectroscopic Methods}
@@ -48,7 +50,7 @@ Although there were many cited documents and papers, it is notable to say here, 
 \subsection{Brief description}
 A brief description of each method listed above is given here, so the reader can see what interests him/her the most and skip right away to the hot stuff.
 
-\subsubsection{X-Ray Fluorescence (XRF)}
+\subsubsection{X-Ray Fluorescence (XRF)} \label{XRF}
 This technique covers the readout of X-Ray emission coming from elements, atomic or not, that are bombarded with high energy radiation (X-Rays, generally higher then the emitted photon), and by interacting with it in a specific way, produce a very characteristic radiation energy, that can be used to analyze a lot of materials (metals, ceramics, ...) qualitatively and quantitatively. 
 \par It can also even be used to some more exotic tasks, such as film thickness measurement. Because X-Rays are not attenuated very easily in the air, vacuum is not strictly necessary to perform measurements with this technique.\\
 
@@ -62,7 +64,21 @@ Some of its pros and cons \cite{GI_XRF}:
 \item[$\times$] More destructive than other methods
 \end{itemize}
 
-\subsubsection{X-Ray Photo-electron Spectroscopy (XPS)} %TODO
+\subsubsection{X-Ray Photo-electron Spectroscopy (XPS)} \label{XPS}
+In general this technique is somewhat similar to XRF (as seen in section \ref{XRF}), in a way that it also uses X-Ray radiation to interact with the structure being studied. In this method X-Ray photons with a certain energy, that must be higher than the ionization energy of the element, interact with an electron, being absorbed by it, and ionizing the atom, i.e. expelling the electron with a certain energy.
+\par We will see later that XPS usually ejects electrons of the K layer (the innermost one, core orbitals). There are other photo-electron spectroscopy methods that use other radiation, or phenomenons  to try and study outermost layers, or valence orbitals \cite{JMH_Modern}. Some of these are ultraviolet radiation (UPS), which wont be covered here, and auger electron spectroscopy (AES) that will be discussed in section \ref{AES}.\\
+
+Some of its pros and cons \cite{CL_XPS}:
+\begin{itemize}
+\item[\checkmark] Easier quantitative analysis
+\item[\checkmark] Chemical states differentiation
+\item[\checkmark] Detection of oxidation states
+\item[$\times$] Samples must be compatible with ultra high vacuum environment
+\item[$\times$] It is mostly a surface technique
+\item[$\times$] Spectra usually take longer to acquire than in other methods
+\end{itemize}
+
+\subsubsection{Auger Electron Spectroscopy (AES)} \label{AES} %TODO
 
 \newpage
 
@@ -75,6 +91,11 @@ John Wiley and Sons Ltd., 4th Ed., 2004.
 \bibitem{GI_XRF} 
 X-ray fluorescence spectroscopy,
 \\\texttt{https://www.gems-inclusions.com/inclusions-studies/analytical-methods/xrfs-2/}
+
+\bibitem{CL_XPS}
+Photo-electron Spectroscopy,
+\\\texttt{https://chem.libretexts.org/Bookshelves/Physical\_and\_Theoretical\_Chemistry\_Textbook\_Maps/Supplemental\_Modules\_(Physical\_and\_Theoretical\_Chemistry)/Spectroscopy/Photoelectron\_Spectroscopy/Photoelectron\_Spectroscopy\%3A\_Application}
+
 \end{thebibliography}
 
 \end{document}
