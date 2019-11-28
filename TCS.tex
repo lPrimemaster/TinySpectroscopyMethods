@@ -1,0 +1,177 @@
+\documentclass[]{report}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\newcommand{\startunderscoreletter}{\catcode`_ 12\relax}
+\newcommand{\stopunderscoreletter}{\catcode`_ 8\relax}
+
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue}
+
+\begin{document}
+
+\title{A Tiny Compilation of Spectroscopic Methods}
+\author{César Godinho}
+\maketitle
+
+\newpage
+
+\begin{abstract}
+Nowadays spectroscopy is a very broad topic. From the tiny visible light spectrometer built by Gustav Kirchhoff and Robert Bunsen, in the mid 19th century, to the present day photo-electron spectroscopy with image rendering, that allows us to display images of electron detection mapped spatially.
+\par It's not wrong to say that we came a long way from those days, but I felt the urge to write something about a few of the modern (some not so much) techniques. This article is intended to have a "not so formal" aspect, since I'm learning all of the things I write in this document, so I wouldn't consider myself an expert. That said, here is a disclaimer of everything you might read on this document: don't trust anything that is possibly too suspicious, also I will try to cite most of the sources I use. \par However, it's not as easy as it sounds to get all the books or excerpts I read in here, so don't get mad at me. Just to reiterate, I'm doing this primarily for fun, so if you intend to learn these further discussed topics properly please \textbf{don't use this miserable document} (that also has no revision whatsoever). Enough said, lets stop with the excuses and get into it.
+\end{abstract}
+
+\newpage
+
+\chapter{Introduction}
+
+In this first section are described the techniques that will be discussed later. If the reader was expecting a section about the history of spectroscopy (than you probably are not like me, I skip all those sections all the time) there are plenty of sources online about the subject, like the trustworthy Wikipedia page about it \href{https://en.wikipedia.org/wiki/History_of_spectroscopy}{here}.
+
+\section{Subjects discussed}
+\par There are a lot of complementary and modified techniques that can be studied nowadays in the world of spectroscopy, the ones that will be referenced in here, that are not necessarily the most "important" nor by any significant order in the following list, are the ones I consider the most interesting to "take a look at". Some of them I don't know much about, but I will try to be as complete and correct as possible.
+\par After enumerating all the topics (instead of having a list of contents, I know, don't judge me, maybe at the time of the reading there is already one here), it's going to be described what will be the line of thought inside of each topic and how to approach the structure of each one.\\
+
+The covered spectroscopic techniques will be:
+
+\begin{itemize}
+\item[$\to$] X-Ray Fluorescence Spectroscopy (XRF)
+\item[$\to$] X-Ray Photo-electron Spectroscopy (XPS)
+\item[$\to$] Auger Electron Spectroscopy (AES)
+\item[$\to$] Raman Spectroscopy
+\item[$\to$] Infrared Spectroscopy
+\item[$\to$] Electron Spin Resonance Spectroscopy (ESR)
+\item[$\to$] Ultraviolet and Visible Light Spectroscopy (UV-Vis)
+\end{itemize}
+
+\par To understand some of the physical phenomenons behind these techniques, it will be required to discuss briefly about some "theoretical" (simplified...) concepts, for example for Raman and Infrared Spectroscopy it is useful to know about rotational-vibrational spectra, etc. It doesn't seem like much, but these techniques are far from few to analyze in here.
+
+\section{Concepts to know}
+\par In order to understand all of the discussed concepts the reader is advised to have some extended concepts of math, some basic concepts of physics, majorly molecular and atomic physics. Some of these subjects will be slightly explained and, most likely, cited from other sources. However, there are no such thing as theory only sections that explain deeply all the used concepts, which are explained "on the fly" for most of the this file. Excepting for a few atomic and molecular considerations in the next chapter. 
+
+\section{Further reading}
+Although there were many cited documents and papers, it is notable to say here, that one of the must read book, that was undoubtly used to compile this document, is the \textit{Modern Spectroscopy by J. M. Hollas} \cite{JMH_Modern}. A great book for an extensive reading in the field, and something I couldn't even aspire to write nor match.
+
+\section{Brief description}
+A brief description of each method listed above is given here, so the reader can see what interests him/her the most and skip right away to the hot stuff. Some of the described techniques have variants that the reader could eventually then search for, however, some of them are explained in this document (such as the Hyper Raman Spectroscopy).
+
+\subsection{X-Ray Fluorescence (XRF)} \label{XRF}
+This technique covers the readout of X-Ray emission coming from elements, atomic or not, that are bombarded with high energy radiation (X-Rays, generally higher then the emitted photon), and by interacting with it in a specific way, produce a very characteristic radiation energy from the transition of an higher orbital into the innermost orbital, where the electron is removed by the radiation, that can be used to analyze a lot of materials (metals, ceramics, ...) qualitatively and quantitatively. 
+\par It can also even be used to some more exotic tasks, such as film thickness measurement. Because X-Rays are not attenuated very easily in the air, vacuum is not strictly necessary to perform measurements with this technique.\\
+
+Some of its pros and cons \cite{GI_XRF}:
+\begin{itemize}
+\item[\checkmark] High Yield for large values of Z (atomic number)
+\item[\checkmark] Possibility of creating mobile devices for \textit{in situ} measurements
+\item[\checkmark] Large range of studiable materials
+\item[$\times$] Poor spot resolution (there are workarounds)
+\item[$\times$] Larger limit of detection than other methods
+\item[$\times$] More destructive than other methods
+\end{itemize}
+
+\subsection{X-Ray Photo-electron Spectroscopy (XPS)} \label{XPS}
+In general this technique is somewhat similar to XRF (as seen in section \ref{XRF}), in a way that it also uses X-Ray radiation to interact with the structure being studied. In this method X-Ray photons with a certain energy, that must be higher than the ionization energy of the element, interact with an electron, being absorbed by it, and ionizing the atom, i.e. expelling the electron with a certain energy.
+\par We will see later that XPS usually ejects electrons of the K layer (the innermost one, core orbitals). There are other photo-electron spectroscopy methods that use other radiation, or phenomenons  to try and study outermost layers, or valence orbitals \cite{JMH_Modern}. Some of these are ultraviolet radiation (UPS), which wont be covered here, and Auger electron spectroscopy (AES) that will be discussed in section \ref{AES}.\\
+
+Some of its pros and cons \cite{CL_XPS}:
+\begin{itemize}
+\item[\checkmark] Easier quantitative analysis
+\item[\checkmark] Chemical states differentiation
+\item[\checkmark] Detection of oxidation states
+\item[$\times$] Samples must be compatible with ultra high vacuum environment
+\item[$\times$] It is mostly a surface technique
+\item[$\times$] Spectra usually take longer to acquire than in other methods
+\end{itemize}
+
+\subsection{Auger Electron Spectroscopy (AES)} \label{AES}
+This technique is actually pretty interesting, as it uses a phenomenon that might happen when core electrons are bombarded with high energy X-Rays. When the K layer electron leaves the atom, as a photo-electron, this atom becomes highly unstable, and a transition from the valence orbitals must occur. Detecting the radiation that comes from this transition is the core concept behind XRF (section \ref{XRF}). 
+\par However, there is a chance this newly produced photon interacts with an existing valence electron, causing it to leave the atom as a photo-electron, since it as a lower binding energy (this electron is named after who discovered "officially" the effect - \textit{Auger} electron, it appears that Lise Meitner found this effect first in 1922 \cite{AU_Wiki}). It is obvious, then, that in this process, we detect this electron to gather information about the atom under study. It is to note that AES can also be performed by exciting the K layer electron by electronic impact and not X-Ray excitation.\\
+
+\newpage
+
+Some of its pros and cons \cite{TH_Many}:
+\begin{itemize}
+\item[\checkmark] High Yield for low values of Z (atomic number)
+\item[\checkmark] Can use an electron source to excite atoms (cheaper)
+\item[\checkmark] Large range of studiable materials
+\item[$\times$] Usually not so good of a Signal to noise ratio (SNR)
+\item[$\times$] Pretty bad at quantitative analysis
+\item[$\times$] Used only to approximate compositional analysis
+\end{itemize}
+
+\subsection{Raman Spectroscopy} \label{RMS}
+Named after it's inventor this type of spectroscopic technique is very different from the ones stated earlier, as it makes use of a fairly different phenomenon to analyze matter. Until this section all the techniques covered use the so called fluorescence phenomenon, directly (XRF) or indirectly (AES) (not XPS though), which happens when the electronic state of an atom/molecule changes. Raman spectroscopy utilizes the concept of vibrational energy levels within molecules. That said, one can not use this to study simple atomic species, as these can't perform any vibration whatsoever (more on vibrational energy levels seen later).
+\par Despite not having a self explanatory nomenclature, the method is quite related to the others by the fact that it also uses radiation to excite the molecules in question. This radiation is usually in the infrared or near infrared (NIR) regimes of light.
+\par The way it works, briefly explained, is that those IR photons excite the molecule vibrational state to a higher virtual state (this meaning very short in time span) that then decays to: the same level where it departed (Raleight Scattering), one level above (Stokes Scattering) or one level below (Anti-Stokes Scattering). The latter two, are the scattering effects we are interested on, and that give us information about the medium. All of this will be explained later in more detail.\\
+
+Some of its pros and cons \cite{RM_Wiki}:
+\begin{itemize}
+\item[\checkmark] Small area of effect in the sample (<1$\mu$m diameter)
+\item[\checkmark] Water doesn't interfere with Raman spectra
+\item[\checkmark] Reduced sample damage risk (uses low energy radiation)
+\item[$\times$] Very sensitive to ambient light noise
+\item[$\times$] Can sometimes induce unwanted fluorescence phenomenons
+\item[$\times$] Used only to approximate compositional analysis
+\end{itemize}
+
+\subsection{Infrared Spectroscopy} \label{IRS}
+When talking about infrared spectroscopy, it is understandable to question its existence alongside with Raman spectroscopy, because, to an untrained eye, they might seem similar. This is not true though, as they differ in a lot of aspects, as we might see.
+\par Unlike Raman spectroscopy, infrared spectroscopy does not excite the molecule in question to a virtual state, instead, it promotes a vibrational transition, and thus, what we observe is the photons coming from that phenomenon. There can also be obtained measurements where rotational and vibrational absorptions are present. The far infrared, near microwave, radiation can also be used in IR spectroscopy in order to observe pure rotational data about the molecule.\\
+
+Some of its pros and cons \cite{IR_Art}:
+\begin{itemize}
+\item[\checkmark] High spatial resolution
+\item[\checkmark] High speed sample collection
+\item[\checkmark] Reduced sample damage risk (uses low energy radiation)
+\item[$\times$] Bulk analysis only
+\item[$\times$] Material identification can be hard when not isolated
+\item[$\times$] Very noise sensitive
+\end{itemize}
+
+\subsection{Electron Spin Resonance Spectroscopy (ESR)} \label{ESR} %TODO
+This technique is rather interesting from the theoretical point of view, as it performs no much different from \href{https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance}{nuclear magnetic resonance} (widely used today in the medical field for imaging). The only difference being that ESR excites the electrons \textit{spin}, instead of atomic nuclei \textit{spin} (we shall see about \textit{spin} briefly later on).
+\par ESR excels mostly at the study of organic radicals \cite{ESR_Wiki}. It is known that two electrons of the same orbital when subdued to external magnetic fields show separation in their energy level, due to their \textit{spin} orienting with the field.
+
+\newpage
+
+\begin{thebibliography}{9}
+\bibitem{JMH_Modern} 
+J. Michael Hollas. 
+\textit{Modern Spectroscopy}. 
+John Wiley and Sons Ltd., 4th Ed., 2004.
+
+\bibitem{GI_XRF} 
+X-ray fluorescence spectroscopy,
+\\\texttt{https://www.gems-inclusions.com/inclusions-studies/analytical-methods/xrfs-2/}
+
+\bibitem{CL_XPS}
+Photo-electron Spectroscopy,
+\\\texttt{https://chem.libretexts.org/Bookshelves/Physical\_and\_Theoretical\_Chemistry\_Textbook\_Maps/Supplemental\_Modules\_(Physical\_and\_Theoretical\_Chemistry)/Spectroscopy/Photoelectron\_Spectroscopy/Photoelectron\_Spectroscopy\%3A\_Application}
+
+\bibitem{AU_Wiki}
+Auger Effect,
+\\\texttt{https://en.wikipedia.org/wiki/Auger\_effect}
+
+\bibitem{TH_Many}
+Electron spectroscopies,
+\\\texttt{https://th.fhi-berlin.mpg.de/th/lectures/summer\_term\_2006/7\_spectroscopies.pdf}
+
+\bibitem{RP_Raman}
+Raman Scattering,
+\\\texttt{https://www.rp-photonics.com/raman\_scattering.html}
+
+\bibitem{RM_Wiki}
+Raman Spectroscopy,
+\\\texttt{https://en.wikipedia.org/wiki/Raman\_spectroscopy}
+
+\bibitem{IR_Art}
+R. Mohammed, D. Hamid, et al. (2018).
+Shining a Light on Awareness: A Review of Functional Near-Infrared Spectroscopy for Prolonged Disorders of Consciousness.
+Frontiers in Neurology. 9. 350. 10.3389/fneur.2018.00350.
+
+\bibitem{ESR_Wiki}
+Electron paramagnetic resonance,
+\\\texttt{https://en.wikipedia.org/wiki/Electron\_paramagnetic\_resonance}
+
+\end{thebibliography}
+
+\end{document}
